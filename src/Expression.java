@@ -10,20 +10,7 @@ public class Expression {
 				  e2 is: (~p=>q)) (Which is an expression)
 	*/
 	
-	public String myExpression;
-	
-	public Expression (String s) throws IllegalLineException {
-		char[] c = s.toCharArray(); 
-		ArrayList<Character> charArray = new ArrayList<Character>();
-		for (int i = 0; i < c.length; i++){
-			charArray.add(new Character(c[i]));
-		}
-		for (Character x : charArray) {
-			if (!Character.isLetter(x) && !s.equals('&') && !s.equals('|') && !s.equals('~') && !s.equals('=') && !s.equals('>') && !s.equals('(') && !s.equals(')'))
-				throw IllegalLineException("String has to contain lower-case letters or can only contain: &|~=>()")
-		} 
-	}
-	
+
 	public Expression(String s) throws IllegalArgumentException {
 		myExpression = s;
 	}
